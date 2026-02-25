@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CCTV Admin</title>
+
+  <!-- ✅ SEO Tags Start -->
+  <meta name="description" content="CCTV Online is a smart and simple app designed for customers of WiFi and Dish service providers. With this app, users can quickly report any issues related to their internet connection, cable TV, or dish services directly to their provider.">
+  <meta name="keywords" content="cctv online, wifi provider, wifi provider in cumilla">
+  <meta name="author" content="Alone boy">
+
+  <!-- Open Graph for Facebook -->
+  <meta property="og:title" content="CCTV Online – Fast & Easy Service Support" />
+  <meta property="og:description" content="CCTV Online is a smart and simple app designed for customers of WiFi and Dish service providers. With this app, users can quickly report any issues related to their internet connection, cable TV, or dish services directly to their provider." />
+  <meta property="og:image" content="https://res.cloudinary.com/daseyqhav/image/upload/v1771912388/no_bg_icon_qnmxyp.png" />
+  <meta property="og:url" content="https://cctvonline1.github.io/app/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CCTV Online – Fast & Easy Service Support" />
+  <meta name="twitter:description" content="CCTV Online is a smart and simple app designed for customers of WiFi and Dish service providers. With this app, users can quickly report any issues related to their internet connection, cable TV, or dish services directly to their provider." />
+  <meta name="twitter:image" content="https://res.cloudinary.com/daseyqhav/image/upload/v1771912388/no_bg_icon_qnmxyp.png" />
+  <!-- ✅ SEO Tags End -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: #ffffff;
+    }
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .app-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .app-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 12px;
+      margin-right: 15px;
+    }
+    .app-title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .app-company {
+      font-size: 14px;
+      color: #bbb;
+    }
+    .meta-info {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0;
+      font-size: 14px;
+    }
+    .install-button {
+      background-color: #1e88e5;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      width: 100%;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+    .install-button:hover {
+      background-color: #1565c0;
+    }
+    .section-title {
+      font-size: 18px;
+      margin: 20px 0 10px;
+    }
+    .about-text {
+      background-color: #1f1f1f;
+      padding: 15px;
+      border-radius: 8px;
+      min-height: 60px;
+      position: relative;
+    }
+    .fade {
+      position: absolute;
+      bottom: 10px; /* নিচে একটু নেমেছে */
+      left: 0;
+      right: 0;
+      height: 40px;
+      background: linear-gradient(transparent, #1f1f1f);
+      pointer-events: none; /* ক্লিক ব্লক করতেছে, তাই এইটা দিলাম */
+    }
+    .read-more {
+      color: #1e88e5;
+      cursor: pointer;
+      margin-top: 10px; /* আগের থেকে একটু নিচে নেমেছে */
+      display: inline-block;
+    }
+
+    /* Screenshot section updated */
+    .screenshots {
+      white-space: nowrap;
+      overflow-x: auto;
+      padding-bottom: 10px;
+    }
+    .screenshots img {
+      height: 200px;
+      margin-right: 20px;
+      display: inline-block;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .screenshots img:last-child {
+      margin-right: 0;
+    }
+
+    /* Modal for image popup */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    .modal img {
+      max-width: 90%;
+      max-height: 80%;
+      display: block;
+      margin: 5% auto;
+      border-radius: 10px;
+    }
+
+    .rating-section {
+      margin-top: 20px;
+    }
+    .average-rating {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .star-display {
+      font-size: 24px;
+      color: #ffcc00;
+      margin-bottom: 10px;
+    }
+    .review {
+      background-color: #1f1f1f;
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .review-title {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .see-more {
+      text-align: center;
+      color: #1e88e5;
+      cursor: pointer;
+      margin: 20px 0;
+    }
+    .see-more:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="app-header">
+      <img src="https://res.cloudinary.com/daseyqhav/image/upload/v1771912388/no_bg_icon_qnmxyp.png" alt="App Icon" class="app-icon" />
+      <div>
+        <div class="app-title">CCTV Admin</div>
+        <div class="app-company">Developed by Alone boy</div>
+      </div>
+    </div>
+
+    <div class="meta-info">
+      <div>3M+ downloads</div>
+      <div>10 MB</div>
+    </div>
+
+    <a href="https://github.com/cctvonline1/app/raw/refs/heads/main/CCTVAdmin.apk" download>
+      <button class="install-button">Download APK</button>
+    </a>
+
+    <div class="section-title">Screenshots</div>
+    <div class="screenshots">
+      <img
+        src="https://cdn.aptoide.com/imgs/b/5/0/b504e579f1973ad4bae69f25cd4b4f9e_screen.jpg"
+        alt="Screenshot 1"
+        onclick="openModal(this.src)"
+      />
+      <img
+        src="https://cdn.aptoide.com/imgs/3/9/3/3932f8843fc2b6c5eae298c91b1b5548_screen.jpg"
+        alt="Screenshot 2"
+        onclick="openModal(this.src)"
+      />
+      <img
+        src="https://cdn.soft112.com/wifi-router-setup-wifi-manager-speed-test-app/00/00/0H/GQ/00000HGQ6R/pad_screenshot.png"
+        alt="Screenshot 3"
+        onclick="openModal(this.src)"
+      />
+    </div>
+
+    <div class="section-title">About this app</div>
+    <div class="about-text" id="aboutText">
+      <div id="aboutShort">
+        <p><b>CCTV Online</b> Fast & Easy Service Support </p>
+        <p>CCTV Online is a smart and simple app designed for customers of WiFi and Dish service providers. With this app, users can quickly report any issues related to their internet connection, cable TV, or dish services directly to their provider.</p>
+      </div>
+      <div id="aboutFull" style="display: none">
+        <p><b>CCTV Online</b> Fast & Easy Service Support </p>
+        <p>CCTV Online is a smart and simple app designed for customers of WiFi and Dish service providers. With this app, users can quickly report any issues related to their internet connection, cable TV, or dish services directly to their provider.</p>
+
+        <p>No more phone calls or waiting endlessly — just send a service request through the app. Your provider will receive the report instantly and take the necessary steps to fix the problem as soon as possible.</p>
+        <ul>
+          <li>
+            <b>Key Features:</b>
+            <ul>
+              <li>Easy problem reporting system</li>
+              <li>Quick communication with your service provider</li>
+              <li>Fast service response</li>
+              <li>Simple and user-friendly interface</li>
+            </ul>
+          </li>
+          <li>
+            <p>CCTV Online makes it easier than ever to stay connected without hassle.</p>
+      </div>
+      <div class="fade" id="fadeEffect"></div>
+      <span class="read-more" onclick="toggleAbout()" id="readMore">See more</span>
+    </div>
+
+    <div class="section-title">Ratings & Reviews</div>
+    <div class="rating-section">
+      <div class="average-rating">4.5 ★</div>
+      <div class="star-display">★★★★★</div>
+      <div class="review">
+        <div class="star-display">★★★★★</div>
+        <div class="review-title">Arman Hossain</div>
+        <div class="review-message">This app is very helpful! I can report my WiFi problems easily and the provider responds quickly. Highly recommended.</div>
+      </div>
+      <div class="review">
+        <div class="star-display">★★★★★</div>
+        <div class="review-title">Ritu Akter</div>
+        <div class="review-message">CCTV Online made my life easier. No more calling customer service again and again. Just report and wait for service.</div>
+      </div>
+      <div class="review">
+        <div class="star-display">★★★★★</div>
+        <div class="review-title">Mahfuz Rahman</div>
+        <div class="review-message">Simple and easy to use. I reported my dish issue and it was fixed within a short time. Great service!</div>
+      </div>
+      <div class="review">
+        <div class="star-display">★★★★★</div>
+        <div class="review-title">Shila Khatun</div>
+        <div class="review-message">Very useful app for WiFi and cable users. The problem reporting system works perfectly. </div>
+      </div>
+      <div class="review">
+        <div class="star-display">★★★★☆</div>
+        <div class="review-title">Sajib Hasan</div>
+        <div class="review-message">Good app and smooth interface. It helps me communicate directly with my provider without any hassle.</div>
+      </div>
+      <div class="review">
+        <div class="star-display">★★★★☆</div>
+        <div class="review-title">Nazifa Jahan</div>
+        <div class="review-message">Fast response and easy system. I love how simple everything is inside the app.</div>
+      </div>
+      <div class="review">
+        <div class="star-display">★★★★★</div>
+        <div class="review-title">Jannatul Nayeem</div>
+        <div class="review-message">Now I don’t need to explain my problem over phone calls. I just submit a report and they come to fix it.</div>
+      </div>
+      <div class="review">
+        <div class="star-display">★★★★★</div>
+        <div class="review-title">Farid Uddin</div>
+        <div class="review-message">Nice app for service support. It saves time and makes communication easier.</div>
+      </div>
+      <div class="review">
+        <div class="star-display">★★★★★</div>
+        <div class="review-title">Tarek Aziz</div>
+        <div class="review-message">Very professional service system. Reporting issues takes less than a minute.</div>
+      </div>
+      <div class="review">
+        <div class="star-display">★★★★★</div>
+        <div class="review-title">Nusrat Tamanna</div>
+        <div class="review-message">Great experience so far. If you use WiFi or Dish service, this app is a must-have!</div>
+      </div>
+
+      <div class="see-more">See all reviews</div>
+    </div>
+  </div>
+
+  <!-- Modal HTML -->
+  <div class="modal" id="modal" onclick="this.style.display='none'">
+    <img id="modalImage" src="" />
+  </div>
+
+  <script>
+    function toggleAbout() {
+      const shortText = document.getElementById("aboutShort");
+      const fullText = document.getElementById("aboutFull");
+      const readMore = document.getElementById("readMore");
+      const fade = document.getElementById("fadeEffect");
+
+      if (fullText.style.display === "none") {
+        fullText.style.display = "block";
+        shortText.style.display = "none";
+        readMore.textContent = "Show less";
+        fade.style.display = "none";
+      } else {
+        fullText.style.display = "none";
+        shortText.style.display = "block";
+        readMore.textContent = "See more";
+        fade.style.display = "block";
+      }
+    }
+
+    function openModal(src) {
+      document.getElementById("modalImage").src = src;
+      document.getElementById("modal").style.display = "block";
+    }
+  </script>
+</body>
+</html>
